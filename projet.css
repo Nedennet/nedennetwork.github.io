@@ -38,6 +38,10 @@ html{
     z-index: -1;
   }
 
+img {
+    max-width: 100%; /* Les images ne doivent jamais dépasser la largeur de leur conteneur */
+    height: auto; /* Maintien les proportions de l'image */
+}
 
 
 .item {
