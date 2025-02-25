@@ -1,30 +1,40 @@
+/* 1️⃣ Réglages généraux */
 body {
     font-family: 'Arial', sans-serif;
     background-color: beige;
-    height: 150vh; /* Ajout d'une hauteur importante pour simuler le défilement */
- 
-  }
-h1 {
-    font-size: 2rem; /* Utilisation de rem pour adapter la taille du texte */
+    height: 150vh; /* Hauteur importante pour simuler le défilement */
+    margin: 0;
+    padding: 0;
 }
 
+/* 2️⃣ Titres */
+h1 {
+    font-size: 2rem; /* Utilisation de rem pour adapter la taille du texte */
+    text-align: center; /* Centrer le titre */
+}
+
+/* 3️⃣ Styles généraux de la section */
 section {
     padding: 20px;
     margin: 10px auto;
-    max-width: 90%; /* Le contenu prend 90% de l'écran */
+    max-width: 90%; /* Le contenu prend 90% de la largeur de l'écran */
 }
-html{
-  scroll-behavior: smooth;
+
+/* 4️⃣ Gestion du scroll pour une meilleure expérience */
+html {
+    scroll-behavior: smooth;
 }
-  .parallax-container {
+
+/* 5️⃣ Parallax Container */
+.parallax-container {
     position: relative;
     height: 100vh;
     overflow: hidden;
     scroll-behavior: smooth;
-  }
+}
 
-  .parallax {
-    background-image: url('ordiphoto.jpeg'); /* Remplacez 'image.jpg' par le chemin de votre image */
+.parallax {
+    background-image: url('ordiphoto.jpeg');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -36,162 +46,179 @@ html{
     right: 0;
     bottom: 0;
     z-index: -1;
-  }
-
-img {
-    max-width: 100%; /* Les images ne doivent jamais dépasser la largeur de leur conteneur */
-    height: auto; /* Maintien les proportions de l'image */
 }
 
+/* 6️⃣ Optimisation des images */
+img {
+    max-width: 100%; /* Les images ne dépassent jamais la largeur de leur conteneur */
+    height: auto; /* Garder les proportions de l'image */
+}
 
+/* 7️⃣ Disposition des éléments en Flexbox */
 .item {
     width: 30%;
     margin: 10px 0;
 }
 
-/* Ajustement pour les petits écrans (mobiles) */
+/* 8️⃣ Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
     .item {
-        width: 100%; /* Sur mobile, chaque élément prend 100% de la largeur */
+        width: 100%; /* Chaque élément prend 100% de la largeur sur mobile */
+        margin: 10px 0;
+    }
+
+    /* Ajuster la présentation de la section */
+    section {
+        padding: 10px;
+        max-width: 100%; /* Enlever la limitation de 90% */
+    }
+    
+    /* Ajuster la taille du titre */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Parallax pour les écrans plus petits */
+    .parallax-container {
+        height: 80vh; /* Réduire la hauteur sur mobile */
+    }
+
+    /* Adapter la taille de l'image dans la parallax */
+    .parallax {
+        background-position: center center;
+    }
+
+    /* Styles supplémentaires pour les images et les boîtes */
+    .image-box, .image-box2, .box {
+        width: 100%; /* Assurer que les boîtes prennent 100% sur mobile */
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .box {
+        margin-left: 0; /* Supprimer le margin-left sur mobile */
+    }
+
+    footer {
+        position: relative;
+        padding: 10px;
+    }
+
+    .social-icons a {
+        font-size: 18px; /* Réduire la taille des icônes sociales sur mobile */
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
     }
 }
 
-
-  .content {
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap; /* Permet d'empiler les éléments si nécessaire */
-    justify-content: space-between;
-  }
-
-  .hidden-element {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-  }
-
-  .visible-element {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  #presentation{
+/* 9️⃣ Formater la section #presentation */
+#presentation {
     box-sizing: border-box;
     border: 2px solid beige;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 10%; /* Réduire les marges latérales */
+    margin-right: 10%;
     padding-bottom: 50px;
     background-color: beige;
     color: black;
     border-radius: 20px;
     margin-bottom: 400px;
-    box-shadow: 0 0 20px black ;
-  
-  }
-  .image-box {
+    box-shadow: 0 0 20px black;
+}
+
+/* 10️⃣ Styles des boîtes d'images */
+.image-box, .image-box2 {
     width: 300px;
     margin: 20px;
     border: 1px solid #ddd;
     overflow: hidden;
     border-radius: 10px;
-    margin-left: 250px;
-    
-  }
+}
 
-  .image-box2 img {
+.image-box2 {
+    margin-left: auto;
+    margin-right: auto; /* Centrer l'image-box2 */
+}
+
+.image-box img, .image-box2 img {
     width: 100%;
     height: auto;
     display: block;
-  }
-  .image-box2 {
-    width: 300px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-left: 400px;
-    
-  }
+}
 
-  .image-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
- 
-  .hidden-on-load {
+/* 11️⃣ Animation des éléments au défilement */
+.hidden-element, .hidden-on-scroll {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
-  }
+}
 
-  .visible-on-scroll {
+.visible-element, .visible-on-load {
     opacity: 1;
     transform: translateY(0);
-  }
-  .hidden-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-  }
+}
 
-  .visible-on-load {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .container {
-    display: flex; /* Utilisation de Flexbox pour placer les div côte à côte */
-  }
+/* 12️⃣ Container flexible avec des boîtes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
 
-  .box {
-    width: 300px;
-    margin: 20px;
+.box {
+    width: 30%;
+    margin: 10px;
     border: 1px solid #ddd;
     overflow: hidden;
     border-radius: 10px;
-    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
-    border: 1px solid #ddd; /* Ajout d'une bordure pour illustrer les div */
-  margin-left: 200px;
-  }
-  .box img{
+    box-sizing: border-box;
+    margin-left: 0; /* Ajustement sur mobile */
+}
+
+.box img {
     width: 100%;
     height: auto;
     display: block;
-  }
-  .box:hover{
+}
+
+.box:hover {
     width: 310px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    box-shadow: 0 0 20px black ;
-  }
-  .box-on-hover:hover{
+    box-shadow: 0 0 20px black;
+}
+
+.box-on-hover:hover {
     transform: scale(1.2);
-  }
-  footer {
+}
+
+/* 13️⃣ Footer */
+footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 2px;
-    position: fixed;
-    bottom: 0;
+    padding: 10px;
+    position: relative;
     width: 100%;
-  }
-  .social-icons {
-    margin-top: 10px;
-  }
+}
 
-  .social-icons a {
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
     font-size: 20px;
-  }
+}
 
-  .social-icons img {
+.social-icons img {
     width: 30px; /* Ajustez la taille des logos selon vos besoins */
     height: 30px;
     margin: 0 10px;
-  }
+}
+
