@@ -222,3 +222,16 @@ footer {
     margin: 0 10px;
 }
 
+/* Par défaut, l'élément est visible */
+.ordinateur {
+    visibility: visible; /* L'élément est visible */
+}
+
+/* Sur les petits écrans (mobile) */
+@media (max-width: 768px) {
+    .ordinateur {
+        visibility: hidden; /* Masquer l'élément sans supprimer son espace */
+    }
+}
+
+
