@@ -8,15 +8,15 @@
     <style>
         @font-face {
             font-family: 'saintCarell';
-            src: url('./fonts/SaintCarell.otf');
+            src: url('SaintCarell.otf');
         }
         @font-face {
             font-family: 'typewriter';
-            src: url('./fonts/Typewriter.otf');
+            src: url('Typewriter.otf');
         }
         @font-face {
             font-family: 'bright';
-            src: url('./fonts/bright.otf');
+            src: url('bright.otf');
         }
     </style>
 </head>
