@@ -4,6 +4,15 @@ body {
     height: 150vh; /* Ajout d'une hauteur importante pour simuler le défilement */
  
   }
+h1 {
+    font-size: 2rem; /* Utilisation de rem pour adapter la taille du texte */
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 90%; /* Le contenu prend 90% de l'écran */
+}
 html{
   scroll-behavior: smooth;
 }
