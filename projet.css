@@ -5,3 +5,12 @@ body {
     height: 150vh; /* Ajout d'une hauteur importante pour simuler le défilement */
  
   }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
