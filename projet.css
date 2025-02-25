@@ -37,25 +37,10 @@ html{
     bottom: 0;
     z-index: -1;
   }
-@media (max-width: 768px) {
-    .parallax {
-        background-attachment: scroll; /* Désactive le parallax sur mobile */
-    }
-}
+
 /* Styles généraux pour les écrans plus grands (ordinateurs) */
-.container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 80%;
-}
 
-.item {
-    width: 30%; /* 30% de la largeur du conteneur sur desktop */
-    margin-bottom: 20px;
-}
 
-/* Styles pour les écrans de taille inférieure ou égale à 768px (tablettes/mobiles) */
 @media (max-width: 768px) {
     .container {
         display: block; /* Un seul bloc sur mobile */
