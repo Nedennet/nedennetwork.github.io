@@ -38,20 +38,20 @@ html{
     z-index: -1;
   }
 
-/* Styles généraux pour les écrans plus grands (ordinateurs) */
 
 
+.item {
+    width: 30%;
+    margin: 10px 0;
+}
+
+/* Ajustement pour les petits écrans (mobiles) */
 @media (max-width: 768px) {
-    .container {
-        display: block; /* Un seul bloc sur mobile */
-        width: 100%;
-    }
-    
     .item {
-        width: 100%; /* Les éléments prennent toute la largeur */
-        margin-bottom: 10px;
+        width: 100%; /* Sur mobile, chaque élément prend 100% de la largeur */
     }
 }
+
 
   .content {
     padding: 20px;
@@ -59,6 +59,9 @@ html{
     color: #fff;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-wrap: wrap; /* Permet d'empiler les éléments si nécessaire */
+    justify-content: space-between;
   }
 
   .hidden-element {
