@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: beige;
+    height: 150vh; /* Ajout d'une hauteur importante pour simuler le défilement */
+ 
+  }
