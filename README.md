@@ -1,1 +1,81 @@
-# nedennetwork.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet</title>
+    <link rel="stylesheet" href="projet.css"/>
+    <style>
+        @font-face {
+            font-family: 'saintCarell';
+            src: url('./fonts/SaintCarell.otf');
+        }
+        @font-face {
+            font-family: 'typewriter';
+            src: url('./fonts/Typewriter.otf');
+        }
+        @font-face {
+            font-family: 'bright';
+            src: url('./fonts/bright.otf');
+        }
+    </style>
+</head>
+<body>
+      <div class="parallax-container">
+        <div class="hidden-element" id="animatedElement">
+        <div class="parallax"></div>
+        <div class="content">
+            <center> <div style="margin-top: 150px;" id="presentation">
+              
+            <p style="font-size: 500%; font-family: 'saintCarell', sans-serif ; margin-top: 10px;">NedeN</p>
+            <br>
+            <p style="font-size: 200%; margin-top: -90px; font-family: 'typewriter', sans-serif;">Web Designer</p>
+            <br>
+            <button style="font-size: 250%; background-color: pink; border: 3px solid palevioletred; border-radius: 10px; font-family: 'bright', sans-serif;  "><a style="text-decoration-line: none; color: black;" href="#site">See more ></a></button>
+            
+        </div></center>
+      
+        </div>
+        </div>
+    
+    </div>
+      <div class="content">
+        <div class="hidden-on-load" id="scrollElement">
+            <p style="font-size: 120%; color: black;">Trouvez votre bonheur chez Neden...
+            </p>
+            <center> <p style="font-size: 350%; color: black;" id="site">Des modèles conçus à votre image</p></center>
+            <h1 style="color: black;">Pour propulser votre entreprise</h1>
+          </div>
+        </div>
+        <div class="hidden-on-scroll" id="ElementScroll">
+          <div class="container">
+          <div class="box">
+            <img src="ordinateur.jpeg" alt="Exemple d'image">
+           <center><p style="font-family: 'typewriter', sans-serif;">modèle de sites pré-conçus</p></center>  <!-- Remplacez 'example.jpg' par le chemin de votre image -->
+          </div>
+          <div class="box">
+           <a href="../page montage/montage.html"> <img src="montage.jpeg" alt="Exemple d'image"></a>
+           <center><p style="font-family: 'typewriter', sans-serif;">montages vidéos</p></center>  <!-- Remplacez 'example.jpg' par le chemin de votre image -->
+          </div>
+       
+        </div>
+      </div>
+      
+        <footer>
+          <p>&copy; 2024 Mon Site Web. Tous droits réservés.</p>
+          <div class="social-icons">
+            <a href="https://www.tiktok.com/@neden.network?_t=8j9A1AOQOXJ&_r=1" target="_blank"><img src="tiktok.png" alt="Tiktok"></a>
+            <a href="https://www.instagram.com/neden.network/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <!-- Ajoutez d'autres liens sociaux avec des logos -->
+          </div>
+        </footer>
+     
+        <br><br><br><br><br><br><br>
+      <script src="projet.js"> </script>
+   
+     
+</body>
+</html>
+
+
+
